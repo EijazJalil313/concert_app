@@ -77,4 +77,11 @@ const sendWelcomeEmail = async (to, userInfo) => {
   await sendEmail(to, "Welcome", content, userInfo);
 };
 
-module.exports = { sendOTP, sendWelcomeEmail };
+
+const sendOrderConfirmation  = async (to,bookingDetails,userInfo) => {
+  const content = `your booking is confirmed. Details seats: ${bookingDetails.seats}, Concert - ${bookingDetails.concertName}`;
+  await sendEmail(to,"booking Confirmation",content,userInfo)
+}
+       
+
+module.exports = { sendOTP, sendWelcomeEmail, sendOrderConfirmation };

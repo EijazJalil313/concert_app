@@ -108,6 +108,9 @@ export default function BookConcertScreen() {
 
                         return (
                             <Pressable key={cat.id}
+                            onPress={()=>{
+                                router.push({pathname:"/book/tickets",params:{categoryId:cat.id}})
+                            }}
                                 style={{ backgroundColor: colors?.color, borderColor: colors.border, borderWidth: 3, width: width - 40 }}
                                 className="rounded-xl px-4 py-6 mx-auto w-11/12 justify-center items-center"
 
