@@ -13,9 +13,10 @@ const authMiddleware = (req,res,next) => {
     try{
         const decoded = verifyToken(token, process.env.JWT_SECRET);
         req.user = decoded;
+        next();
     }catch(err){
         logger.error("Invalid token",{err});
-        res.status(401).json({error:"Invalid token"})
+        return res.status(401).json({error:"Invalid token"})
     }
 }
 

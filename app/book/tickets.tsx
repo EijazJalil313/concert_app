@@ -1,9 +1,11 @@
+import { getPendingBooking } from "@/api/bookingApi";
 import { getConcert } from "@/api/concertApi";
 import { useBookingStore } from "@/stores/bookingStore";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { router, useLocalSearchParams, useRouter } from "expo-router";
-import { Pressable, ScrollView, Text, View } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { ActivityIndicator, Alert, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
@@ -11,6 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function TicketScreen() {
     const Router = useRouter();
     const { categoryId } = useLocalSearchParams<{ categoryId?: string }>();
+    const [pendingSecondsLeft,setPendingSecondsLeft] = useState(0);
 
     const tickets = useBookingStore((s) => s.tickets);
     const addTicket = useBookingStore((s) => s.addTicket);
@@ -18,6 +21,7 @@ export default function TicketScreen() {
     const updateQuantity = useBookingStore((s) => s.updateQuantity);
     const getTotal = useBookingStore((s) => s.getTotal);
     const clearCart = useBookingStore((s) => s.clearCart);
+    const queryClient = useQueryClient();
     const {
         data: concert,
         isLoading: concertLoading,
@@ -27,6 +31,22 @@ export default function TicketScreen() {
         queryFn: getConcert,
     });
 
+
+    const {data: pendingBooking , isLoading:pendingLoading} = useQuery({
+        queryKey:["pendingBooking",categoryId],
+        queryFn:() => getPendingBooking(categoryId as string),
+        enabled:!!categoryId,
+    })
+
+
+    // Show loader while concert is loading
+    if (concertLoading || !concert) {
+        return (
+            <SafeAreaView className="flex-1 bg-black justify-center items-center">
+                <ActivityIndicator size={"large"} color={"#fff"} />
+            </SafeAreaView>
+        );
+    }
 
     const formattedDate = new Date(concert.date).toLocaleDateString("en-US", {
         weekday: "short",
@@ -52,9 +72,9 @@ export default function TicketScreen() {
     const myTicket = tickets?.find((t) => t.sectionId === categoryId);
     const quantity = myTicket?.quantity ?? 0;
 
-    const totalTickets = tickets?.reduce((acc,t) => acc + t.quantity,0);
+    const totalTickets = tickets?.reduce((acc,t) => acc + (t.quantity || 0), 0) ?? 0;
     const totalPrice = getTotal();
-    const isActiveSession = false;
+    const isActiveSession = pendingBooking && pendingSecondsLeft > 0;
     const handleAdd = () => {
   if (isActiveSession) return;
 
@@ -80,6 +100,9 @@ const handleRemove = () => {
 
 
 
+
+
+
     if (!categoryData) {
         return (
             <SafeAreaView className="flex-1 bg-black justify-center items-center">
@@ -90,6 +113,92 @@ const handleRemove = () => {
             </SafeAreaView>
         )
     }
+
+
+
+    // if(pendingLoading){
+    //     return(
+    //         <SafeAreaView className="flex-1 bg-black justify-center items-center">
+    //             <ActivityIndicator size={"large"} color={"#fff"}>
+    //                 <Text className="text-white mt-2">Checking Session...</Text>
+
+    //             </ActivityIndicator>
+    //         </SafeAreaView>
+    //     )
+    // }
+    // if(concertLoading){
+    //     return(
+    //         <SafeAreaView className="flex-1 bg-black justify-center items-center">
+    //             <ActivityIndicator size={"large"} color={"#fff"}>
+    //                 <Text className="text-white mt-2">Loading Concert</Text>
+
+    //             </ActivityIndicator>
+    //         </SafeAreaView>
+    //     )
+    // }
+
+    const hasShownModal = useRef(false);
+
+useEffect(() => {
+  if (pendingBooking) {
+    const now = new Date().getTime();
+
+    let diff = Math.floor(
+      (new Date(pendingBooking.expiresAt).getTime() - now) / 1000
+    );
+
+    console.log("Tickets: Pending diff on fetch:", diff);
+
+    if (diff <= 0) {
+      console.log("Tickets: Frontend expiry on fetch, invalidate");
+      queryClient.setQueryData(
+        ["pendingBooking", categoryId],
+        null
+      );
+      setPendingSecondsLeft(0);
+      return;
+    }
+
+    setPendingSecondsLeft(diff);
+
+    const id = setInterval(() => {
+      const updatedDiff = Math.floor(
+        (new Date(pendingBooking.expiresAt).getTime() - Date.now()) / 1000
+      );
+
+      setPendingSecondsLeft(Math.max(0, updatedDiff));
+
+      if (updatedDiff <= 0) {
+        clearInterval(id);
+        queryClient.invalidateQueries({
+            queryKey:["pendingBooking",categoryId]
+        })
+      }
+    }, 1000);
+
+    return () => clearInterval(id);
+  }else{
+    setPendingSecondsLeft(0);
+  }
+}, [pendingBooking, categoryId]);
+
+
+
+const handleContinue = () => {
+    if(isActiveSession){
+        queryClient.invalidateQueries({
+            queryKey:["pendingBooking",categoryId]
+        });
+        router.push("/book/review");
+        return;
+    }
+
+    if(totalTickets == 0){
+        Alert.alert("No Tickets, Please atleast add one ticket");
+        return;
+    }
+    router.push("/book/review");
+}
 
 
 
@@ -166,9 +275,30 @@ const handleRemove = () => {
                 <Text className="text-white text-lg font-semibold">{totalPrice.toLocaleString()}</Text>
             </View>
 
-            <Pressable className="px-4 py-3 rounded-full bg-white">
-                    <Text className="font-semibold">Continue</Text>
-            </Pressable>
+            <Pressable
+  onPress={handleContinue}
+  disabled={(totalTickets === 0 && !isActiveSession) || pendingLoading}
+  className={`px-6 py-3 rounded-full ${
+    (totalTickets === 0 && !isActiveSession) || pendingLoading
+      ? "bg-gray-700"
+      : "bg-white"
+  }`}
+>
+  <Text
+    className={`font-semibold ${
+      (totalTickets === 0 && !isActiveSession) || pendingLoading
+        ? "text-gray-300"
+        : "text-black"
+    }`}
+  >
+    {isActiveSession
+      ? "Continue Session"
+      : totalTickets > 0
+      ? "Continue"
+      : "Select Tickets"}
+  </Text>
+</Pressable>
+
         </View>
 
     </SafeAreaView>

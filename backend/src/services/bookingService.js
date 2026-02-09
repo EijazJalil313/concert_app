@@ -1,19 +1,29 @@
+const { PrismaClient } = require("@prisma/client");
 const { SINGLE_CONCERT_ID } = require("../config/constants");
 const logger = require("../config/logger");
 const { sendOrderConfirmation } = require("./emailService");
 
+const prisma = new PrismaClient();
+
+// Status constants (status is Int in schema)
+const STATUS = {
+    PENDING: 0,
+    CONFIRMED: 1,
+    CANCELLED: 2,
+    EXPIRED: 3,
+};
 
 
 const getPendingBookings = async (userId, categoryId = null) => {
     const where = {
         userId,
-        conertId: SINGLE_CONCERT_ID,
-        status: "Pending",
-        expiresAr: { gt: new Date() }
+        concertId: SINGLE_CONCERT_ID,
+        status: STATUS.PENDING,
+        expiresAt: { gt: new Date() }
     };
 
     if (categoryId) {
-        where.conertId = categoryId;
+        where.categoryId = categoryId;
     };
 
     return await prisma.booking.findFirst({
@@ -49,15 +59,16 @@ const createBooking = async (userId, data) => {
         }
 
         const now = new Date();
-        const expiresAt = new Date(now + 10 * 60 * 1000);
+        const expiresAt = new Date(now.getTime() + 10 * 60 * 1000);
 
         const booking = await tx.booking.create({
             data: {
                 userId,
                 concertId: SINGLE_CONCERT_ID,
                 categoryId,
-                seats,
-                status: "pending",
+                seats: String(seats),
+                status: STATUS.PENDING,
+                bookedAt: now,
                 expiresAt
             }
         });
@@ -66,12 +77,17 @@ const createBooking = async (userId, data) => {
             where: { id: categoryId },
             data: { availableSeats: { decrement: seats } },
         });
-        await tx.ticketCategory.update({
+        await tx.concert.update({
             where: { id: SINGLE_CONCERT_ID },
             data: { availableSeats: { decrement: seats } },
         });
 
-        logger.info("Booking created", { bookingId: booking.id, expiresAt })
+        logger.info("Booking created", { bookingId: booking.id, expiresAt });
+
+        return tx.booking.findUnique({
+            where: { id: booking.id },
+            include: { category: { select: { id: true, name: true, price: true } } }
+        });
     })
 };
 
@@ -88,7 +104,7 @@ const confirmBooking = async (bookingId, userId) => {
 
     await prisma.booking.update({
         where: { id: bookingId },
-        data: { status: "confirmed" }
+        data: { status: STATUS.CONFIRMED }
     });
 
 
@@ -97,16 +113,16 @@ const confirmBooking = async (bookingId, userId) => {
         include: { profile: true }
     });
 
-    const concert = await prisma.user.findUnique({
+    const concert = await prisma.concert.findUnique({
         where: { id: booking.concertId },
     });
 
     await sendOrderConfirmation(
-        user.eamil, {
+        user.email, {
         seats: booking.seats, concertName: concert.name
     },
         {
-            name: user.profile?.name || 'N/A', eamil: user.eamil,
+            name: user.profile?.name || 'N/A', email: user.email,
         },)
 
         logger.info("Booking Confirmed", { bookingId })
@@ -114,7 +130,7 @@ const confirmBooking = async (bookingId, userId) => {
 
 
 const  cancelPendingBook = async (userId,categoryId) => {
-    const pending = await getPendingBookings(userId,bookingId);
+    const pending = await getPendingBookings(userId,categoryId);
     if(!pending) throw new Error("no active session for this category")
 
 
@@ -122,16 +138,16 @@ const  cancelPendingBook = async (userId,categoryId) => {
 
         await tx.ticketCategory.update({
             where:{id:categoryId},
-            data:{availableSeats:{increment:pending.seats}}
+            data:{availableSeats:{increment:parseInt(pending.seats)}}
         });
         await tx.concert.update({
             where:{id:SINGLE_CONCERT_ID},
-            data:{availableSeats:{increment:pending.seats}}
+            data:{availableSeats:{increment:parseInt(pending.seats)}}
         });
 
         await tx.booking.update({
             where:{id:pending.id},
-            data:{status:"cancelled"}
+            data:{status:STATUS.CANCELLED}
         })
 
     });
@@ -147,18 +163,18 @@ const cleanExpiredBookings = async () => {
 
     await prisma.$transaction(async (tx) => {
         const expired = await tx.booking.findMany({
-            where:{status:"pending",expiresAt:{lt:new Date()}},
+            where:{status:STATUS.PENDING,expiresAt:{lt:new Date()}},
             include:{category:true,concert:true},
         });
 
         for(const b of expired) {
             await tx.ticketCategory.update({
                 where:{id:b.categoryId},
-                data:{availableSeats:{increment:b.seats}},
+                data:{availableSeats:{increment:parseInt(b.seats)}},
             });
             await tx.booking.update({
-                where:{id:id},
-                data:{status:"expired"}
+                where:{id:b.id},
+                data:{status:STATUS.EXPIRED}
             })
         }
 

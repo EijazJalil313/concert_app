@@ -7,7 +7,7 @@ const { createBooking, confirmBooking, getPendingBookings, cancelPendingBook } =
 
 const createBookingCtrl = async (req, res) => {
     try {
-        const booking = createBooking(req.user.userId, req.body);
+        const booking = await createBooking(req.user.userId, req.body);
         res.json(booking);
     }catch(err){
         logger.error("create booking error",{
@@ -21,7 +21,7 @@ const createBookingCtrl = async (req, res) => {
 
 const confirmBookingCtrl = async (req,res) => {
     try {
-        const result = confirmBooking(req.params.id, req.user.userId);
+        const result = await confirmBooking(req.params.id, req.user.userId);
         res.json(result);
     }catch(err){
         logger.error("Confirm booking error",{
@@ -68,7 +68,7 @@ const cancelPendingBookingCtrl = async (req,res) => {
         }
         categoryId = String(categoryId).trim();
         const result = await cancelPendingBook(req.user.userId,categoryId);
-        req.json(result);
+        res.json(result);
 
 
     }catch(err){
