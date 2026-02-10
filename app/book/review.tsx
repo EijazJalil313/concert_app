@@ -4,8 +4,8 @@ import { useBookingStore } from '@/stores/bookingStore';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'expo-router';
-import React, { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Alert, Pressable, StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { ActivityIndicator, Alert, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -51,7 +51,7 @@ export default function ReviewScreen() {
 
   const categoryId = tickets[0]?.sectionId;
 
-  const totalSeats = tickets.reduce((sum, t) => sum + t.quantity, 0);
+  const totalSeats = tickets.reduce((sum, t) => sum + Number(t.quantity || 0), 0);
 
   const { data: pendingBooking, isLoading: pendingLoading } = useQuery({
     queryKey: ["pendingBooking", categoryId],
@@ -71,8 +71,11 @@ export default function ReviewScreen() {
       });
     },
     onError: (err: any) => {
-      console.error("Create booking error", err?.response?.data || err?.message);
-      Alert.alert("Error", "Failed to reserve the tickets");
+      console.error("Create booking error", err);
+      console.error("Error response:", err?.response);
+      console.error("Error data:", err?.response?.data);
+      const errorMsg = err?.response?.data?.message || err?.message || "Failed to reserve the tickets";
+      Alert.alert("Error", errorMsg);
       router.back();
     },
   });
@@ -93,8 +96,11 @@ export default function ReviewScreen() {
   });
 
 
+  
+
+
   useEffect(() => {
-    if (!concertLoading && concert && !booking && !createMutation.isPending && !pendingLoading && categoryId) {
+    if (!concertLoading && concert && !booking && !createMutation.isLoading && !pendingLoading && categoryId) {
       console.log("Review mount: checking pending for category", categoryId, pendingBooking);
 
       if (pendingBooking) {
@@ -123,18 +129,72 @@ export default function ReviewScreen() {
         setExpiresAt(new Date(pendingBooking.expiresAt));
         setQueryStatus(null);
       } else if (tickets.length > 0) {
+        console.log("Creating booking with:", { categoryId, seats: totalSeats });
         createMutation.mutate({ categoryId, seats: totalSeats })
       } else {
         router.back();
       }
     }
-  }, [concertLoading, concert?.id, categoryId, booking, createMutation.isPending, pendingLoading, pendingBooking, totalSeats])
+  }, [concertLoading, concert?.id, categoryId, booking, createMutation.isLoading, pendingLoading, pendingBooking, totalSeats])
 
+  // Timer useEffect - MUST be before early returns
+  useEffect(()=>{
+    if (!expiresAt) return;
 
-  if (createMutation.isPending || concertLoading || pendingLoading) {
+    // Start ticking interval based on expiresAt state
+    hasInitializedTimer.current = true;
+
+    const tick = () => {
+      const now = Date.now();
+      const diff = Math.max(0, Math.floor((new Date(expiresAt).getTime() - now) / 1000));
+      setSecondsLeft(diff);
+      if (diff <= 0) {
+        // show alert and cleanup when time runs out
+        handleExpiry(true);
+      }
+    };
+
+    // Initialize immediately then every second
+    tick();
+    const id = setInterval(tick, 1000);
+
+    return () => clearInterval(id);
+  }, [expiresAt])
+
+  const handleExpiry = (showAlert = true) => {
+    if(hasInitializedTimer.current || showAlert){
+      console.log("expiry triggered",showAlert);
+    if(showAlert){
+      Alert.alert("Time is expired we have released the tickets you have choosen, please book again");
+    };
+    clearCart();
+    setBooking(null);
+    setExpiresAt(null);
+    setQueryStatus(null);
+    queryClient.invalidateQueries({queryKey:["pendingBooking"]});
+    router.replace("/book");
+    }
+  }
+
+  // useMemo hook - MUST be before early returns  
+  const ticketSummary = useMemo(() => {
+    return tickets.map((t) => {
+      return {
+        id: t.sectionId,
+        name: t.name,
+        price: t.price,
+        qty: t.quantity,
+        lineTotal: t.price * t.quantity,
+      };
+    });
+  }, [tickets]);
+
+  // Early returns - no hooks after this point
+  if (createMutation.isLoading || concertLoading || pendingLoading) {
     return (
       <SafeAreaView className='flex-1 bg-black justify-center items-center'>
-        <ActivityIndicator size={"large"} color={"#fff"}></ActivityIndicator>
+        <ActivityIndicator size={"large"} color={"#fff"} />
+        <Text className="text-white mt-2">Loading...</Text>
       </SafeAreaView>
     )
   }
@@ -150,11 +210,27 @@ export default function ReviewScreen() {
     )
   }
 
-
-
-
   const mm = Math.floor(secondsLeft / 60).toString().padStart(2, "0");
   const ss = (secondsLeft % 60).toString().padStart(2, "0");
+
+
+  const posterUri = concert?.imageUrl || "https://placeholder.com/100×150";
+  const eventTitle = concert?.name || "";
+  const venue = concert?.venue || "";
+
+  const datetime = new Date(concert.date).toLocaleString("en-US", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+
+
+  const orderAmount = getTotal();
+  const bookingFee = Math.max(0, Math.round(orderAmount * 0.0826));
+  const grandTotal = orderAmount + bookingFee;
 
   return (
     <SafeAreaView className='flex-1 bg-black'>
@@ -184,6 +260,107 @@ export default function ReviewScreen() {
         </View>
 
       </View>
+
+      <ScrollView>
+        <View className='flex-row items-start mb-4 px-4'>
+          <Image resizeMode='cover' className='w-16 h-20 rounded-md mr-3' source={{ uri: posterUri }} />
+          <View className='flex-1'>
+            <Text className='text-white font-semibold mb-1'>{eventTitle}</Text>
+            <Text className='text-gray-400'>{venue}</Text>
+          </View>
+        </View>
+
+        <View className='bg-[#111] border border-gray-800 rounded-2xl px-5 py-2 mb-5'>
+          <Text className='text-gray-300 font-semibold mb-3'>{datetime}</Text>
+          {ticketSummary.length === 0 ? (
+            <Text className="text-gray-400 mb-3">
+              No tickets selected
+            </Text>
+          ) : (
+            ticketSummary.map((t) => (
+              <View key={t.id} className="mb-3">
+                <View className="flex-row justify-between items-start">
+
+                  <View className="flex-1 pr-3">
+                    <Text className="text-white font-semibold">
+                      {t.qty} x {t.name}
+                    </Text>
+                  </View>
+
+                  <View className="items-end">
+                    <Text className="text-white font-semibold">
+                      ₹{t.lineTotal.toLocaleString()}
+                    </Text>
+
+                    <Pressable className="mt-2">
+                      <Text className="text-gray-400 underline">
+                        Remove
+                      </Text>
+                    </Pressable>
+                  </View>
+
+                </View>
+                <View className="flex-row items-center mt-3">
+  <View className="w-7 h-7 rounded-md bg-gray-800 mr-3 items-center justify-center">
+    <Ionicons
+      name="ticket-outline"
+      size={16}
+      color="#9ca3af"
+    />
+  </View>
+
+  <Text className="text-gray-400 text-sm">
+    M-Ticket: Entry using the QR code in your app
+  </Text>
+</View>
+
+              </View>
+            ))
+          )}
+
+        </View>
+      </ScrollView>
+
+      <View className="absolute bottom-4 left-0 right-0 bg-black border-t border-gray-800 p-3 flex-row items-center justify-between">
+
+  <View className="flex-row items-center">
+    <View className="bg-white rounded-md px-2 py-1 mr-3">
+      <Ionicons
+        name="wallet-outline"
+        size={18}
+        color="#111"
+      />
+    </View>
+
+    <View>
+      <Text className="text-gray-400 text-xs">Pay Using</Text>
+      <Text className="text-white font-semibold">Google Pay UPI</Text>
+    </View>
+  </View>
+
+  <Pressable className='bg-white px-8 py-3 rounded-full flex-row items-center'>
+    <View className="mr-4 items-end">
+      <Text className="text-gray-500 text-sm">
+        ₹{grandTotal.toFixed(1)}
+      </Text>
+      <Text className="text-black font-semibold text-sm">Total</Text>
+    </View>
+    {confirmMutation.isPending && (
+  <ActivityIndicator
+    size="small"
+    color="#000"
+    className="mr-2"
+  />
+)}
+
+<Text className="text-black font-semibold">
+  {confirmMutation.isPending ? "Confirming..." : "Pay now"}
+</Text>
+
+  </Pressable>
+
+</View>
+
     </SafeAreaView>
   )
 }
