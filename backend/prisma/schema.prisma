@@ -70,7 +70,7 @@ model Booking {
   categoryId       String                 @db.ObjectId
   seats            String
   status           Int
-  bookedAt         DateTime
+  bookedAt         DateTime               @default(now())
   expiresAt        DateTime?
   user             User                    @relation(fields:[userId],references:[id])             
   concert          Concert                 @relation(fields:[concertId  ],references:[id])

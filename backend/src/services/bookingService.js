@@ -164,27 +164,53 @@ const cleanExpiredBookings = async () => {
     await prisma.$transaction(async (tx) => {
         const expired = await tx.booking.findMany({
             where:{status:STATUS.PENDING,expiresAt:{lt:new Date()}},
-            include:{category:true,concert:true},
+            select:{id:true,categoryId:true,seats:true},
         });
 
-        for(const b of expired) {
-            await tx.ticketCategory.update({
-                where:{id:b.categoryId},
-                data:{availableSeats:{increment:parseInt(b.seats)}},
-            });
-            await tx.booking.update({
-                where:{id:b.id},
-                data:{status:STATUS.EXPIRED}
-            })
+        if(expired.length === 0) {
+            logger.info("No expired bookings to clean");
+            return;
         }
+
+        // Batch update all expired bookings to EXPIRED status
+        const expiredIds = expired.map(b => b.id);
+        await tx.booking.updateMany({
+            where:{id:{in:expiredIds}},
+            data:{status:STATUS.EXPIRED}
+        });
+
+        // Group bookings by category and calculate total seats to return
+        const categorySeats = expired.reduce((acc, b) => {
+            acc[b.categoryId] = (acc[b.categoryId] || 0) + parseInt(b.seats);
+            return acc;
+        }, {});
+
+        // Update each category's available seats
+        const categoryUpdates = Object.entries(categorySeats).map(([categoryId, seats]) =>
+            tx.ticketCategory.update({
+                where:{id:categoryId},
+                data:{availableSeats:{increment:seats}},
+            })
+        );
+
+        // Calculate total seats to return to concert
+        const totalSeats = expired.reduce((sum, b) => sum + parseInt(b.seats), 0);
+        
+        // Update concert available seats
+        const concertUpdate = tx.concert.update({
+            where:{id:SINGLE_CONCERT_ID},
+            data:{availableSeats:{increment:totalSeats}}
+        });
+
+        await Promise.all([...categoryUpdates, concertUpdate]);
 
         logger.info("clean expired bookings",{
             count:expired.length,
             duration:Date.now() - startTime
         })
     },{
-        timeout:10000,
-        maxWait:5000,
+        timeout:30000,
+        maxWait:10000,
     })
 };
 

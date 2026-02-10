@@ -2,6 +2,7 @@ import { getConcert } from "@/api/concertApi";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "expo-router";
+import { useState } from "react";
 import { ActivityIndicator, Dimensions, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -18,16 +19,37 @@ const COLOR_MAP: Record<string, { color: string; border: string }> = {
 
 export default function BookConcertScreen() {
     const router = useRouter();
+    const [loadingCategoryId, setLoadingCategoryId] = useState<string | null>(null);
+    
     const { data: concert, isLoading, error } = useQuery({
         queryKey: ["concert"],
         queryFn: getConcert,
 
     });
 
+    const handleCategoryPress = (categoryId: string) => {
+        setLoadingCategoryId(categoryId);
+        // Small delay to show loading indicator, then navigate
+        setTimeout(() => {
+            router.push({ pathname: "/book/tickets", params: { categoryId } });
+            setLoadingCategoryId(null);
+        }, 300);
+    };
+
     if (isLoading) {
         return (
             <SafeAreaView className='flex-1 bg-black justify-center items-center'>
                 <ActivityIndicator size={"large"} color={"#fff"} />
+                <Text className="text-white mt-2">Loading...</Text>
+            </SafeAreaView>
+        )
+    }
+
+    if (loadingCategoryId) {
+        return (
+            <SafeAreaView className='flex-1 bg-black justify-center items-center'>
+                <ActivityIndicator size={"large"} color={"#fff"} />
+                <Text className="text-white mt-2">Checking Session...</Text>
             </SafeAreaView>
         )
     }
@@ -108,9 +130,7 @@ export default function BookConcertScreen() {
 
                         return (
                             <Pressable key={cat.id}
-                            onPress={()=>{
-                                router.push({pathname:"/book/tickets",params:{categoryId:cat.id}})
-                            }}
+                            onPress={() => handleCategoryPress(cat.id)}
                                 style={{ backgroundColor: colors?.color, borderColor: colors.border, borderWidth: 3, width: width - 40 }}
                                 className="rounded-xl px-4 py-6 mx-auto w-11/12 justify-center items-center"
 
