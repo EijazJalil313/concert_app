@@ -3,7 +3,7 @@ import { getConcert } from "@/api/concertApi";
 import { useBookingStore } from "@/stores/bookingStore";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { router, useLocalSearchParams, useRouter, useFocusEffect } from "expo-router";
+import { router, useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
@@ -21,6 +21,7 @@ export default function TicketScreen() {
   const Router = useRouter();
   const { categoryId } = useLocalSearchParams<{ categoryId?: string }>();
 const [showModal, setShowModal] = useState(false);
+const [isFocused, setIsFocused] = useState(false);
 
   const queryClient = useQueryClient();
 
@@ -59,7 +60,15 @@ const [showModal, setShowModal] = useState(false);
     useCallback(() => {
       hasShownModal.current = false;
       setHasCheckedInitialState(false);
+      setIsFocused(true);
       queryClient.invalidateQueries({ queryKey: ["pendingBooking", categoryId] });
+
+      return () => {
+        // On blur: hide modal and reset shown flag so it can show again when returning
+        setIsFocused(false);
+        setShowModal(false);
+        hasShownModal.current = false;
+      };
     }, [categoryId, queryClient])
   );
 
@@ -121,7 +130,7 @@ const [showModal, setShowModal] = useState(false);
           pendingBooking.category.id,
           pendingBooking.category.name,
           pendingBooking.category.price,
-          pendingBooking.seats
+          Number(pendingBooking.seats) || 0
         );
       } else {
         // Clear cart if no active booking for this category
@@ -184,7 +193,7 @@ const [showModal, setShowModal] = useState(false);
         if (!isExpired) {
           clearCart();
           const { category, seats } = pendingBooking; 
-          addTicket(category.id, category.name, category.price, seats);
+          addTicket(category.id, category.name, category.price, Number(seats) || 0);
         } else {
           // Session expired, clear cart
           clearCart();
@@ -195,11 +204,12 @@ const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     const isActiveSession = pendingBooking && pendingSecondsLeft > 0;
 
-    if (isActiveSession && !pendingLoading && !concertLoading && !hasShownModal.current) {
+    // Only show modal when this screen is focused to avoid it appearing over other screens
+    if (isActiveSession && !pendingLoading && !concertLoading && !hasShownModal.current && isFocused) {
         hasShownModal.current = true;
         setShowModal(true);
     }
-  }, [pendingBooking, pendingLoading, concertLoading, pendingSecondsLeft]);
+  }, [pendingBooking, pendingLoading, concertLoading, pendingSecondsLeft, isFocused]);
 
   useEffect(()=>{
     if(showModal && pendingSecondsLeft <=0){

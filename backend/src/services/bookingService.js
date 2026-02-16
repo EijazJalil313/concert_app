@@ -5,12 +5,12 @@ const { sendOrderConfirmation } = require("./emailService");
 
 const prisma = new PrismaClient();
 
-// Status constants (status is Int in schema)
+// Status constants (now stored as enum strings - matches Prisma BookingStatus)
 const STATUS = {
-    PENDING: 0,
-    CONFIRMED: 1,
-    CANCELLED: 2,
-    EXPIRED: 3,
+    PENDING: 'PENDING',
+    CONFIRMED: 'CONFIRMED',
+    CANCELLED: 'CANCELLED',
+    EXPIRED: 'EXPIRED',
 };
 
 
@@ -102,11 +102,10 @@ const confirmBooking = async (bookingId, userId) => {
         throw new Error("Invalid or expired")
     };
 
-    await prisma.booking.update({
+    const updated = await prisma.booking.update({
         where: { id: bookingId },
         data: { status: STATUS.CONFIRMED }
     });
-
 
     const user = await prisma.user.findUnique({
         where: { id: userId },
@@ -118,14 +117,21 @@ const confirmBooking = async (bookingId, userId) => {
     });
 
     await sendOrderConfirmation(
-        user.email, {
-        seats: booking.seats, concertName: concert.name
-    },
-        {
-            name: user.profile?.name || 'N/A', email: user.email,
-        },)
+        user.email,
+        { seats: booking.seats, concertName: concert?.name },
+        { name: user.profile?.name || 'N/A', email: user.email }
+    );
 
-        logger.info("Booking Confirmed", { bookingId })
+    logger.info("Booking Confirmed", { bookingId });
+
+    // Return the confirmed booking with related data for the controller/client
+    return prisma.booking.findUnique({
+        where: { id: bookingId },
+        include: {
+            category: { select: { id: true, name: true, price: true } },
+            concert: { select: { id: true, name: true, venue: true, date: true, imageUrl: true } }
+        }
+    });
 };
 
 
@@ -215,6 +221,64 @@ const cleanExpiredBookings = async () => {
 };
 
 
+const getConfirmedBooking = async(userId,bookingId) => {
+        return await prisma.booking.findFirst({
+            where:{
+                id:bookingId,
+                userId,
+                status: STATUS.CONFIRMED
+            },
+            include:{
+                category:{
+                    select:{name:true,id:true,price:true}
+                },
+                concert:{
+                    select:{
+                        id:true,
+                        name:true,
+                        venue:true,
+                        date:true,
+                        imageUrl:true,
+                    }
+                }
+            }
+        })
+}
+
+
+const getUserBookings = async (userId) => {
+    return await prisma.booking.findMany({
+        where: {
+            userId: userId,
+            status: STATUS.CONFIRMED, // Only confirmed bookings
+        },
+    include: {
+      concert: {
+        select: {
+          id: true,
+          name: true,
+          venue: true,
+          date: true,
+          imageUrl: true,
+        },
+      },
+      category: {
+        select: {
+          id: true,
+          name: true,
+          price: true,
+        },
+      },
+    },
+    orderBy: {
+      bookedAt: "desc", // newest bookings first
+    },
+  });
+};
+
+
+
+
 
 module.exports = {
     createBooking,
@@ -222,4 +286,6 @@ module.exports = {
     getPendingBookings,
     cleanExpiredBookings,
     cancelPendingBook,
+    getConfirmedBooking,
+    getUserBookings,
 }

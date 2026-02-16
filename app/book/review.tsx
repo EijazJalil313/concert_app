@@ -35,6 +35,7 @@ export default function ReviewScreen() {
   const [expiresAt, setExpiresAt] = useState<Date | null>(null);
   const [secondsLeft, setSecondsLeft] = useState<number>(0);
   const [queueStatus, setQueryStatus] = useState<QueueStatus | null>(null);
+  const [showExpiryModal, setShowExpiryModal] = useState<boolean>(false);
   const hasInitializedTimer = useRef(false);
 
 
@@ -96,7 +97,7 @@ export default function ReviewScreen() {
   });
 
 
-  
+
 
 
   useEffect(() => {
@@ -122,8 +123,8 @@ export default function ReviewScreen() {
           pendingBooking.category.id,
           pendingBooking.category.name,
           pendingBooking.category.price,
-          pendingBooking.seats
-
+          Number(pendingBooking.seats) || 0
+ 
         );
         setBooking(pendingBooking);
         setExpiresAt(new Date(pendingBooking.expiresAt));
@@ -138,7 +139,7 @@ export default function ReviewScreen() {
   }, [concertLoading, concert?.id, categoryId, booking, createMutation.isLoading, pendingLoading, pendingBooking, totalSeats])
 
   // Timer useEffect - MUST be before early returns
-  useEffect(()=>{
+  useEffect(() => {
     if (!expiresAt) return;
 
     // Start ticking interval based on expiresAt state
@@ -162,19 +163,32 @@ export default function ReviewScreen() {
   }, [expiresAt])
 
   const handleExpiry = (showAlert = true) => {
-    if(hasInitializedTimer.current || showAlert){
-      console.log("expiry triggered",showAlert);
-    if(showAlert){
-      Alert.alert("Time is expired we have released the tickets you have choosen, please book again");
-    };
+    if (hasInitializedTimer.current || showAlert) {
+      console.log("expiry triggered", showAlert);
+      if (showAlert) {
+        setShowExpiryModal(true);
+        return;
+      }
+
+      // silent expiry fallback
+      clearCart();
+      setBooking(null);
+      setExpiresAt(null);
+      setQueryStatus(null);
+      queryClient.invalidateQueries({ queryKey: ["pendingBooking"] });
+      router.replace("/book");
+    }
+  };
+
+  const onConfirmExpiry = () => {
+    setShowExpiryModal(false);
     clearCart();
     setBooking(null);
     setExpiresAt(null);
     setQueryStatus(null);
-    queryClient.invalidateQueries({queryKey:["pendingBooking"]});
+    queryClient.invalidateQueries({ queryKey: ["pendingBooking"] });
     router.replace("/book");
-    }
-  }
+  };
 
   // useMemo hook - MUST be before early returns  
   const ticketSummary = useMemo(() => {
@@ -231,6 +245,11 @@ export default function ReviewScreen() {
   const orderAmount = getTotal();
   const bookingFee = Math.max(0, Math.round(orderAmount * 0.0826));
   const grandTotal = orderAmount + bookingFee;
+
+
+
+
+
 
   return (
     <SafeAreaView className='flex-1 bg-black'>
@@ -301,18 +320,18 @@ export default function ReviewScreen() {
 
                 </View>
                 <View className="flex-row items-center mt-3">
-  <View className="w-7 h-7 rounded-md bg-gray-800 mr-3 items-center justify-center">
-    <Ionicons
-      name="ticket-outline"
-      size={16}
-      color="#9ca3af"
-    />
-  </View>
+                  <View className="w-7 h-7 rounded-md bg-gray-800 mr-3 items-center justify-center">
+                    <Ionicons
+                      name="ticket-outline"
+                      size={16}
+                      color="#9ca3af"
+                    />
+                  </View>
 
-  <Text className="text-gray-400 text-sm">
-    M-Ticket: Entry using the QR code in your app
-  </Text>
-</View>
+                  <Text className="text-gray-400 text-sm">
+                    M-Ticket: Entry using the QR code in your app
+                  </Text>
+                </View>
 
               </View>
             ))
@@ -323,43 +342,59 @@ export default function ReviewScreen() {
 
       <View className="absolute bottom-4 left-0 right-0 bg-black border-t border-gray-800 p-3 flex-row items-center justify-between">
 
-  <View className="flex-row items-center">
-    <View className="bg-white rounded-md px-2 py-1 mr-3">
-      <Ionicons
-        name="wallet-outline"
-        size={18}
-        color="#111"
-      />
-    </View>
+        <View className="flex-row items-center">
+          <View className="bg-white rounded-md px-2 py-1 mr-3">
+            <Ionicons
+              name="wallet-outline"
+              size={18}
+              color="#111"
+            />
+          </View>
 
-    <View>
-      <Text className="text-gray-400 text-xs">Pay Using</Text>
-      <Text className="text-white font-semibold">Google Pay UPI</Text>
-    </View>
-  </View>
+          <View>
+            <Text className="text-gray-400 text-xs">Pay Using</Text>
+            <Text className="text-white font-semibold">Google Pay UPI</Text>
+          </View>
+        </View>
 
-  <Pressable className='bg-white px-8 py-3 rounded-full flex-row items-center'>
-    <View className="mr-4 items-end">
-      <Text className="text-gray-500 text-sm">
-        ₹{grandTotal.toFixed(1)}
-      </Text>
-      <Text className="text-black font-semibold text-sm">Total</Text>
-    </View>
-    {confirmMutation.isPending && (
-  <ActivityIndicator
-    size="small"
-    color="#000"
-    className="mr-2"
-  />
-)}
+        <Pressable className='bg-white px-8 py-3 rounded-full flex-row items-center'
+          disabled={confirmMutation.isPending || secondsLeft <= 0 || !booking}
+          onPress={() => booking && confirmMutation.mutate(booking.id)}
+        >
+          <View className="mr-4 items-end">
+            <Text className="text-gray-500 text-sm">
+              ₹{grandTotal.toFixed(1)}
+            </Text>
+            <Text className="text-black font-semibold text-sm">Total</Text>
+          </View>
+          {confirmMutation.isPending && (
+            <ActivityIndicator
+              size="small"
+              color="#000"
+              className="mr-2"
+            />
+          )}
 
-<Text className="text-black font-semibold">
-  {confirmMutation.isPending ? "Confirming..." : "Pay now"}
-</Text>
+          <Text className="text-black font-semibold">
+            {confirmMutation.isPending ? "Confirming..." : "Pay now"}
+          </Text>
 
-  </Pressable>
+        </Pressable>
 
-</View>
+      </View>
+
+      {showExpiryModal && (
+        <View className="absolute inset-0 items-center justify-center bg-black/50">
+          <View className="bg-white rounded-2xl p-5 mx-6 w-[90%] shadow-lg">
+            <Text className="text-black text-lg font-semibold text-center mb-2">Time expired</Text>
+            <Text className="text-gray-600 text-center mb-4">We have released the tickets you have chosen, please book again</Text>
+            <View className="border-t border-gray-200 -mx-5" />
+            <Pressable onPress={onConfirmExpiry} className="py-3">
+              <Text className="text-blue-500 text-center font-semibold">OK</Text>
+            </Pressable>
+          </View>
+        </View>
+      )}
 
     </SafeAreaView>
   )

@@ -23,3 +23,15 @@ export const cancelPendingBooking = async(categoryId:string) => {
     const response = await api.delete(`/booking/pending?categoryId=${categoryId}`);
     return response.data;
 }
+
+export const getConfirmedBooking = async (bookingId: string) => {
+  if (!bookingId) throw new Error("bookingId required");
+
+  const response = await api.get(`/booking/confirmed/${bookingId}`);
+  return response.data;
+};
+
+export const getUserBookings = async () => {
+  const response = await api.get("/booking/mine");
+  return response.data;
+};

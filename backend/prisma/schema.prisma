@@ -62,6 +62,13 @@ model TicketCategory {
   bookings         Booking[]
 }
 
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  EXPIRED
+}
+
 
 model Booking {
   id               String                 @id @default(auto()) @map("_id") @db.ObjectId
@@ -69,7 +76,7 @@ model Booking {
   concertId        String                 @db.ObjectId
   categoryId       String                 @db.ObjectId
   seats            String
-  status           Int
+  status           BookingStatus         @default(PENDING)
   bookedAt         DateTime               @default(now())
   expiresAt        DateTime?
   user             User                    @relation(fields:[userId],references:[id])             
@@ -86,3 +93,7 @@ model BookingQueue {
   timeSlot         DateTime?
   status           String
 }
+
+
+
+

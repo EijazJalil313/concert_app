@@ -1,5 +1,6 @@
+const { error } = require("winston");
 const logger = require("../config/logger");
-const { createBooking, confirmBooking, getPendingBookings, cancelPendingBook } = require("../services/bookingService")
+const { createBooking, confirmBooking, getPendingBookings, cancelPendingBook, getConfirmedBooking, getUserBookings } = require("../services/bookingService")
 
 
 
@@ -85,11 +86,56 @@ const cancelPendingBookingCtrl = async (req,res) => {
 }
 
 
+
+const getConfirmedBookingCtrl = async (req,res) => {
+    try{
+        const {bookingId} = req.params;
+        if(!bookingId){
+            return res.status(400).json({error:"invalid booking id"}) 
+        };
+
+        const booking = await getConfirmedBooking(req.user.userId, bookingId);
+        if(!booking){
+            return res.status(404).json({error:"Booking not found"})
+        };
+        res.json(booking);
+        }catch(err){
+        logger.error("Get confirmed booking error",{
+            message:err?.message,
+            name:err.name,
+            stack:err.stack,
+            bookingId:req.params.bookingId
+        });
+        res.status(500).json({error:err.message})
+    }
+}
+
+
+const getUserBookingsCtrl = async (req, res) => {
+  try {
+    const bookings = await getUserBookings(req.user.userId);
+
+    res.json(bookings);
+  } catch (err) {
+    logger.error("Get bookings error", {
+      err: err.message,
+      code: err.code,
+      meta: err.meta,
+      userId: req.user?.userId,
+    });
+
+    res.status(500).json({ error: "Failed to fetch bookings" });
+  }
+};
+
+
 module.exports = {
     createBookingCtrl,
     confirmBookingCtrl,
     getPendingBookingCtrl,
-    cancelPendingBookingCtrl
+    cancelPendingBookingCtrl,
+    getConfirmedBookingCtrl,
+    getUserBookingsCtrl,
 }
 
 

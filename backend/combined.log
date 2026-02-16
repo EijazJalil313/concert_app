@@ -1928,3 +1928,980 @@
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-02-09T22:21:23.643Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-02-09T22:21:25.286Z"}
 {"level":"info","message":"Server running on port 3000","timestamp":"2026-02-09T22:21:37.397Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-10T19:23:28.499Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-10T19:24:36.164Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-10T19:25:28.672Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-10T19:26:28.591Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-10T19:27:28.594Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-10T19:28:28.813Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-10T19:29:29.007Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-10T19:30:28.612Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-10T19:31:28.612Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-10T19:32:12.315Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-14T11:23:18.084Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:24:20.747Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:25:18.450Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:26:18.500Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:27:18.554Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:28:18.266Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:29:18.255Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:30:18.303Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:31:56.565Z"}
+{"bookingId":"69905d4a277e6c806b530192","expiresAt":"2026-02-14T11:42:26.296Z","level":"info","message":"Booking created","timestamp":"2026-02-14T11:32:28.363Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:32:53.888Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:33:53.995Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:34:53.960Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:35:53.955Z"}
+{"error":"Error: you have an active booking session for this category.complete payment or wait for release\n    at createBooking (D:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:41:15)\n    at async createBookingCtrl (D:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\bookingController.js:10:25)","level":"error","message":"create booking error","timestamp":"2026-02-14T11:36:18.394Z"}
+{"error":"Error: you have an active booking session for this category.complete payment or wait for release\n    at createBooking (D:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:41:15)\n    at async createBookingCtrl (D:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\bookingController.js:10:25)","level":"error","message":"create booking error","timestamp":"2026-02-14T11:36:33.120Z"}
+{"code":"P2010","err":{"clientVersion":"6.19.2","code":"P2010","meta":{"code":"unknown","message":"Kind: I/O error: timed out, labels: {\"RetryableWriteError\"}, source: None","modelName":"Concert"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"Get concert Error \nInvalid `prisma.concert.findUnique()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\constantController.js:9:46\n\n  6 \n  7 const getConcertCtrl = async (req,res) => {\n  8     try{\n→ 9         const concert = await prisma.concert.findUnique(\nRaw query failed. Code: `unknown`. Message: `Kind: I/O error: timed out, labels: {\"RetryableWriteError\"}, source: None`","timestamp":"2026-02-14T11:36:38.823Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:36:53.934Z"}
+{"bookingId":"69905e5f277e6c806b530193","expiresAt":"2026-02-14T11:47:03.202Z","level":"info","message":"Booking created","timestamp":"2026-02-14T11:37:04.612Z"}
+{"bookingId":"69905e8d277e6c806b530194","expiresAt":"2026-02-14T11:47:49.358Z","level":"info","message":"Booking created","timestamp":"2026-02-14T11:37:50.481Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:37:54.163Z"}
+{"bookingId":"69905e8d277e6c806b530194","level":"info","message":"Pending booking Cancelled","timestamp":"2026-02-14T11:38:27.168Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:38:54.254Z"}
+{"bookingId":"69905eda277e6c806b530195","expiresAt":"2026-02-14T11:49:06.370Z","level":"info","message":"Booking created","timestamp":"2026-02-14T11:39:07.399Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:39:53.962Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:40:53.985Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:41:54.336Z"}
+{"count":1,"duration":1174,"level":"info","message":"clean expired bookings","timestamp":"2026-02-14T11:42:55.047Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:43:53.986Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:44:54.012Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:45:54.036Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:46:54.018Z"}
+{"count":1,"duration":1733,"level":"info","message":"clean expired bookings","timestamp":"2026-02-14T11:47:55.644Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:48:54.199Z"}
+{"count":1,"duration":1553,"level":"info","message":"clean expired bookings","timestamp":"2026-02-14T11:49:55.475Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:50:54.037Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:51:54.044Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:52:54.057Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T11:53:54.086Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T12:06:23.409Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T12:07:20.688Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T12:08:20.842Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T12:09:20.754Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-14T13:17:51.361Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-14T17:39:59.593Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:41:24.872Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:42:00.053Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:42:59.716Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:43:59.719Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:45:00.651Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:45:59.736Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:46:59.780Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:47:59.783Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:48:59.773Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:50:00.253Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:51:12.626Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:52:06.553Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T17:53:07.207Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T18:00:59.753Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T18:01:59.754Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T18:02:59.769Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T18:03:59.778Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T18:05:02.425Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T18:05:59.819Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T18:07:00.621Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-14T18:08:01.739Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T10:28:40.794Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:29:46.989Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:30:40.924Z"}
+{"bookingId":"6991a0796a273b4c67086cf6","expiresAt":"2026-02-15T10:41:21.265Z","level":"info","message":"Booking created","timestamp":"2026-02-15T10:31:22.569Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:31:40.938Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:32:41.041Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:33:40.964Z"}
+{"bookingId":"6991a1116a273b4c67086cf7","expiresAt":"2026-02-15T10:43:53.880Z","level":"info","message":"Booking created","timestamp":"2026-02-15T10:33:55.394Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:34:42.100Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:35:40.963Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:36:41.225Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T10:37:23.661Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6991a1116a273b4c67086cf7","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T10:37:23.662Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:37:41.241Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:38:40.993Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:39:41.112Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:40:41.085Z"}
+{"count":1,"duration":3057,"level":"info","message":"clean expired bookings","timestamp":"2026-02-15T10:41:43.968Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:42:41.063Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:43:41.032Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:44:41.358Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:45:41.377Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:46:41.384Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:47:41.057Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:48:41.264Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:49:41.532Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:50:41.132Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:51:41.121Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:52:41.094Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:53:41.156Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:54:41.176Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:55:41.113Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:56:41.239Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:57:41.247Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:58:41.139Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T10:59:41.133Z"}
+{"dbName":"mydb","level":"info","message":"Using MongoDB database","timestamp":"2026-02-15T11:00:34.647Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T11:00:34.666Z"}
+{"dbName":"mydb","level":"info","message":"Using MongoDB database","timestamp":"2026-02-15T11:01:14.948Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T11:01:14.961Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:02:16.971Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T11:03:04.466Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T11:17:48.750Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:18:57.163Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:19:49.165Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T11:19:53.592Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T11:24:07.762Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:25:16.532Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T11:25:44.659Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:26:46.599Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:27:45.580Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:28:45.053Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:29:44.875Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:30:45.807Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:31:45.011Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:32:45.026Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:33:44.866Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:34:45.542Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:35:44.864Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:36:44.975Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T11:55:32.521Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:56:35.269Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:57:32.752Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T11:58:32.849Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:01:06.143Z"}
+{"bookingId":"6991b58a6896262889f8e90b","expiresAt":"2026-02-15T12:11:14.770Z","level":"info","message":"Booking created","timestamp":"2026-02-15T12:01:16.130Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T12:01:30.429Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6991b58a6896262889f8e90b","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T12:01:30.430Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:02:04.091Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:03:04.118Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:04:04.267Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:05:04.135Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:06:04.136Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:07:04.235Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:08:04.154Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:09:04.163Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:10:04.182Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:11:04.171Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:12:04.171Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:13:05.616Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:14:10.545Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:22:18.244Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:24:53.489Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:25:07.985Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:26:10.143Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:26:28.455Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:27:31.257Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:28:29.022Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:32:18.644Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:33:28.101Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:34:18.828Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:34:29.834Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:35:33.865Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:36:30.360Z"}
+{"bookingId":"6991bdf402395af5678dc879","expiresAt":"2026-02-15T12:47:08.050Z","level":"info","message":"Booking created","timestamp":"2026-02-15T12:37:11.305Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T12:37:26.227Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6991bdf402395af5678dc879","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T12:37:26.229Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:37:30.082Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:38:30.021Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:39:30.037Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:39:48.651Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T12:46:29.185Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:47:33.550Z"}
+{"bookingId":"6991c0839a0b6332ab2adf09","expiresAt":"2026-02-15T12:58:03.141Z","level":"info","message":"Booking created","timestamp":"2026-02-15T12:48:04.238Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T12:48:12.583Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6991c0839a0b6332ab2adf09","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T12:48:12.586Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:48:29.669Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:49:29.535Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:50:29.457Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:51:29.491Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:52:29.346Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:53:29.342Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:54:29.346Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:55:31.379Z"}
+{"bookingId":"6991c2629a0b6332ab2adf0a","expiresAt":"2026-02-15T13:06:02.145Z","level":"info","message":"Booking created","timestamp":"2026-02-15T12:56:03.888Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T12:56:16.441Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6991c2629a0b6332ab2adf0a","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T12:56:16.442Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:56:29.463Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:57:29.524Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:58:29.577Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T12:59:29.728Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:00:29.503Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:01:29.479Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:02:29.774Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:03:29.551Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:04:29.437Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:05:29.469Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:06:29.708Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:07:29.484Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:08:29.795Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:09:29.517Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:10:29.653Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:11:29.503Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:12:29.576Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:13:29.586Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:14:29.602Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:15:30.009Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:16:29.608Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:17:30.915Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:18:29.779Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:19:29.684Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:20:29.653Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:21:29.764Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:22:29.874Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:23:29.675Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:27:17.282Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:28:14.614Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:29:14.405Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T13:43:15.256Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:44:15.513Z"}
+{"bookingId":"6991cdb5f622d804ec1b5eaf","expiresAt":"2026-02-15T13:54:21.103Z","level":"info","message":"Booking created","timestamp":"2026-02-15T13:44:22.852Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T13:44:34.560Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6991cdb5f622d804ec1b5eaf","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T13:44:34.561Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:45:15.454Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:46:15.811Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:47:15.399Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:48:15.610Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:49:15.482Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:50:15.431Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:51:19.445Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:52:15.639Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:53:15.462Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:54:15.783Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:55:15.486Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:56:15.481Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:57:15.499Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:58:15.492Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T13:59:15.501Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:00:15.506Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:01:15.516Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:02:15.590Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:03:15.735Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:04:15.538Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:05:15.551Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:06:15.551Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:07:15.555Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:08:15.591Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:09:15.580Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:10:15.583Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:11:15.600Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:12:15.826Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:13:15.663Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:14:15.690Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:15:15.624Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:16:15.701Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:17:15.636Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:18:15.633Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:19:15.937Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:20:15.889Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:21:15.937Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:22:15.813Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:23:15.670Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:24:15.687Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:25:16.074Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:26:15.878Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:27:15.906Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T14:28:19.846Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T16:46:56.473Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T16:47:59.722Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T16:48:56.677Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T16:49:56.622Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T16:50:56.664Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T16:51:56.869Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T16:52:56.799Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T16:53:56.802Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T16:59:03.296Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:00:01.207Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:01:01.237Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:02:01.280Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:03:01.395Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:04:01.386Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:05:01.381Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:06:01.274Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:08:01.441Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:09:09.916Z"}
+{"bookingId":"6991fde3ca8b74ad77a8698c","expiresAt":"2026-02-15T17:19:55.516Z","level":"info","message":"Booking created","timestamp":"2026-02-15T17:09:56.669Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:10:01.617Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T17:10:04.326Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6991fde3ca8b74ad77a8698c","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T17:10:04.329Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:11:01.557Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:12:01.612Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:13:01.578Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:14:01.575Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:15:01.610Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:16:01.802Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:17:01.676Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:17:32.764Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:18:09.539Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:18:14.152Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:18:18.179Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:18:20.426Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:19:28.319Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:19:58.933Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:02.027Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:08.964Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:11.370Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:22.242Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:24.423Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:29.140Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:34.190Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:40.317Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:46.887Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:53.177Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:20:56.375Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:21:01.646Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:21:30.714Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:21:32.233Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:21:34.141Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:21:35.449Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:21:37.357Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:21:46.254Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:22:09.394Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:22:19.426Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:22:25.431Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:22:30.321Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:22:34.552Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:22:37.093Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:22:39.734Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:22:57.548Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:23:06.352Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:23:11.407Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:23:14.623Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:23:22.879Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:24:30.094Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:25:23.401Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:26:23.207Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:27:23.017Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:27:58.689Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:28:07.418Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:28:14.883Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:28:42.506Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:29:49.677Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:30:42.714Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:31:42.907Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:03.926Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:14.607Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:18.415Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:27.273Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:31.683Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:33.897Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:36.240Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:42.803Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:50.264Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:52.747Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:33:57.225Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:05.912Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:12.075Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:15.368Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:18.626Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:22.933Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:30.599Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:34.477Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:36.086Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:45.158Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:56.814Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:34:58.794Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:00.656Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:02.024Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:09.187Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:12.958Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:15.088Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:24.008Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:32.768Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:47.569Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:35:59.705Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:36:02.117Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:36:06.059Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:36:12.978Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:36:21.887Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:36:30.818Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:36:47.469Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:36:52.610Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:09.540Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:10.907Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:17.503Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:19.937Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:26.740Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:30.092Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:33.116Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:37.361Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:43.091Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:51.841Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:37:59.452Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:38:05.680Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:38:08.543Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:38:43.256Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:38:57.602Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:39:12.026Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:39:27.135Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:40:01.632Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:40:04.814Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:40:21.021Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:40:46.436Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:41:54.057Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:42:46.652Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:44:06.501Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:44:14.262Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:44:31.720Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:44:51.652Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:44:58.801Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T17:45:07.006Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:46:13.929Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:47:07.120Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:48:07.142Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:49:07.153Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:50:07.334Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:51:07.292Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:52:07.173Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:53:07.183Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:54:07.300Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:55:07.289Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:56:07.496Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:57:07.541Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:58:07.395Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T17:59:07.992Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:00:07.422Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:01:07.251Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:02:07.255Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T18:02:50.213Z"}
+{"bookingId":"69920a6d95e7ee1bd3a9f454","expiresAt":"2026-02-15T18:13:25.128Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:03:26.212Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:03:36.143Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"69920a6d95e7ee1bd3a9f454","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:03:36.145Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:03:50.418Z"}
+{"bookingId":"69920a9595e7ee1bd3a9f455","expiresAt":"2026-02-15T18:14:05.477Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:04:06.517Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:04:13.449Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"69920a9595e7ee1bd3a9f455","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:04:13.450Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:04:50.560Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:05:50.327Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:06:50.334Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:07:50.347Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:08:50.385Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:09:50.406Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:10:50.369Z"}
+{"bookingId":"69920c3e95e7ee1bd3a9f456","expiresAt":"2026-02-15T18:21:10.398Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:11:11.558Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:11:17.176Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"69920c3e95e7ee1bd3a9f456","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:11:17.177Z"}
+{"bookingId":"69920c3e95e7ee1bd3a9f456","level":"error","message":"Get confirmed booking error \nInvalid `prisma.booking.findFirst()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:219:37\n\n  216 \n  217 \n  218 const getConfirmedBooking = async(userId,bookingId) => {\n→ 219         return await prisma.booking.findFirst({\n                where: {\n                  id: \"69920c3e95e7ee1bd3a9f456\",\n                  userId: \"69864b9f6cfe706fa476a582\",\n                  status: \"confirmed\"\n                          ~~~~~~~~~~~\n                },\n                include: {\n                  category: {\n                    select: {\n                      name: true,\n                      id: true,\n                      price: true\n                    }\n                  },\n                  concert: {\n                    select: {\n                      id: true,\n                      name: true,\n                      venue: true,\n                      date: true,\n                      imageUrl: true\n                    }\n                  }\n                }\n              })\n\nInvalid value for argument `status`. Expected BookingStatus.","name":"PrismaClientValidationError","stack":"PrismaClientValidationError: \nInvalid `prisma.booking.findFirst()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:219:37\n\n  216 \n  217 \n  218 const getConfirmedBooking = async(userId,bookingId) => {\n→ 219         return await prisma.booking.findFirst({\n                where: {\n                  id: \"69920c3e95e7ee1bd3a9f456\",\n                  userId: \"69864b9f6cfe706fa476a582\",\n                  status: \"confirmed\"\n                          ~~~~~~~~~~~\n                },\n                include: {\n                  category: {\n                    select: {\n                      name: true,\n                      id: true,\n                      price: true\n                    }\n                  },\n                  concert: {\n                    select: {\n                      id: true,\n                      name: true,\n                      venue: true,\n                      date: true,\n                      imageUrl: true\n                    }\n                  }\n                }\n              })\n\nInvalid value for argument `status`. Expected BookingStatus.\n    at Nn (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async getConfirmedBooking (D:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:219:16)\n    at async getConfirmedBookingCtrl (D:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\bookingController.js:97:25)","timestamp":"2026-02-15T18:11:17.468Z"}
+{"bookingId":"69920c5195e7ee1bd3a9f457","expiresAt":"2026-02-15T18:21:29.508Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:11:30.743Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:11:38.081Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"69920c5195e7ee1bd3a9f457","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:11:38.082Z"}
+{"bookingId":"69920c5195e7ee1bd3a9f457","level":"error","message":"Get confirmed booking error \nInvalid `prisma.booking.findFirst()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:219:37\n\n  216 \n  217 \n  218 const getConfirmedBooking = async(userId,bookingId) => {\n→ 219         return await prisma.booking.findFirst({\n                where: {\n                  id: \"69920c5195e7ee1bd3a9f457\",\n                  userId: \"69864b9f6cfe706fa476a582\",\n                  status: \"confirmed\"\n                          ~~~~~~~~~~~\n                },\n                include: {\n                  category: {\n                    select: {\n                      name: true,\n                      id: true,\n                      price: true\n                    }\n                  },\n                  concert: {\n                    select: {\n                      id: true,\n                      name: true,\n                      venue: true,\n                      date: true,\n                      imageUrl: true\n                    }\n                  }\n                }\n              })\n\nInvalid value for argument `status`. Expected BookingStatus.","name":"PrismaClientValidationError","stack":"PrismaClientValidationError: \nInvalid `prisma.booking.findFirst()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:219:37\n\n  216 \n  217 \n  218 const getConfirmedBooking = async(userId,bookingId) => {\n→ 219         return await prisma.booking.findFirst({\n                where: {\n                  id: \"69920c5195e7ee1bd3a9f457\",\n                  userId: \"69864b9f6cfe706fa476a582\",\n                  status: \"confirmed\"\n                          ~~~~~~~~~~~\n                },\n                include: {\n                  category: {\n                    select: {\n                      name: true,\n                      id: true,\n                      price: true\n                    }\n                  },\n                  concert: {\n                    select: {\n                      id: true,\n                      name: true,\n                      venue: true,\n                      date: true,\n                      imageUrl: true\n                    }\n                  }\n                }\n              })\n\nInvalid value for argument `status`. Expected BookingStatus.\n    at Nn (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n    at ei.handleRequestError (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6911)\n    at ei.handleAndLogRequestError (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6593)\n    at ei.request (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6300)\n    at async a (D:\\eventManagementApp\\concertapp\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9551)\n    at async getConfirmedBooking (D:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:219:16)\n    at async getConfirmedBookingCtrl (D:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\bookingController.js:97:25)","timestamp":"2026-02-15T18:11:38.285Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:11:50.381Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:12:50.427Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T18:12:52.349Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T18:12:59.841Z"}
+{"bookingId":"69920cc4b2533763fd31b823","expiresAt":"2026-02-15T18:23:24.701Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:13:25.766Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:13:31.263Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"69920cc4b2533763fd31b823","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:13:31.265Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:14:00.100Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:15:00.171Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:15:59.983Z"}
+{"bookingId":"69920d70b2533763fd31b824","expiresAt":"2026-02-15T18:26:16.141Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:16:17.257Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:16:22.538Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"69920d70b2533763fd31b824","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:16:22.540Z"}
+{"bookingId":"69920d7cb2533763fd31b826","expiresAt":"2026-02-15T18:26:28.725Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:16:29.740Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:16:34.363Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"69920d7cb2533763fd31b826","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:16:34.365Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:17:00.037Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:18:00.089Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:18:59.979Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:20:00.068Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:20:59.981Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:22:00.222Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:23:00.245Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:24:00.034Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:25:00.048Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:26:00.351Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:27:00.065Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:28:00.234Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:29:00.089Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:30:00.084Z"}
+{"bookingId":"699210ccb2533763fd31b827","expiresAt":"2026-02-15T18:40:36.761Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:30:38.425Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:30:45.154Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"699210ccb2533763fd31b827","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:30:45.154Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:31:00.209Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:32:00.114Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:33:00.120Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:34:00.231Z"}
+{"bookingId":"699211b8b2533763fd31b828","expiresAt":"2026-02-15T18:44:32.893Z","level":"info","message":"Booking created","timestamp":"2026-02-15T18:34:33.918Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T18:34:40.211Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"699211b8b2533763fd31b828","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T18:34:40.212Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:35:00.125Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:36:00.126Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:37:00.296Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:38:00.175Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:39:00.182Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:40:00.227Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:41:00.192Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:42:00.306Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:43:00.429Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:44:00.206Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:45:01.531Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:46:00.204Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:47:00.325Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:48:00.362Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:49:00.532Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:50:00.906Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:51:00.740Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:52:00.259Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T18:53:00.369Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T19:03:18.140Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:04:25.130Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:05:18.242Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:06:18.242Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:07:18.258Z"}
+{"bookingId":"6992196bbeefc4d8ee63c085","expiresAt":"2026-02-15T19:17:23.422Z","level":"info","message":"Booking created","timestamp":"2026-02-15T19:07:24.288Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T19:07:40.089Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6992196bbeefc4d8ee63c085","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T19:07:40.090Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:08:18.263Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:09:18.458Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:10:18.274Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:11:18.282Z"}
+{"bookingId":"69921a63beefc4d8ee63c086","expiresAt":"2026-02-15T19:21:31.628Z","level":"info","message":"Booking created","timestamp":"2026-02-15T19:11:32.829Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:12:18.395Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:13:18.305Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:14:18.333Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:15:18.379Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:16:18.341Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:17:18.319Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:18:18.334Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:19:18.488Z"}
+{"error":"Error: you have an active booking session for this category.complete payment or wait for release\n    at createBooking (D:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:41:15)\n    at async createBookingCtrl (D:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\bookingController.js:11:25)","level":"error","message":"create booking error","timestamp":"2026-02-15T19:19:36.120Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:20:18.362Z"}
+{"bookingId":"69921c79beefc4d8ee63c087","expiresAt":"2026-02-15T19:30:25.225Z","level":"info","message":"Booking created","timestamp":"2026-02-15T19:20:26.227Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-15T19:20:40.008Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"69921c79beefc4d8ee63c087","level":"info","message":"Booking Confirmed","timestamp":"2026-02-15T19:20:40.009Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:21:18.424Z"}
+{"bookingId":"69921ccebeefc4d8ee63c088","expiresAt":"2026-02-15T19:31:50.057Z","level":"info","message":"Booking created","timestamp":"2026-02-15T19:21:50.967Z"}
+{"count":1,"duration":1049,"level":"info","message":"clean expired bookings","timestamp":"2026-02-15T19:22:19.303Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:23:18.369Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:24:18.383Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:25:18.391Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:26:18.400Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:27:18.471Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:28:18.479Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:29:18.420Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:30:18.420Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:31:18.438Z"}
+{"err":{"expiredAt":"2026-02-15T19:29:46.000Z","message":"jwt expired","name":"TokenExpiredError"},"level":"error","message":"Invalid token","timestamp":"2026-02-15T19:31:55.059Z"}
+{"bookingId":"69921f3bbeefc4d8ee63c08a","expiresAt":"2026-02-15T19:42:11.867Z","level":"info","message":"Booking created","timestamp":"2026-02-15T19:32:12.734Z"}
+{"count":1,"duration":2220,"level":"info","message":"clean expired bookings","timestamp":"2026-02-15T19:32:20.553Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:33:18.540Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:34:18.461Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:35:18.465Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:36:18.479Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:37:18.486Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:38:18.499Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:39:18.513Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:40:18.550Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:41:18.534Z"}
+{"count":1,"duration":1273,"level":"info","message":"clean expired bookings","timestamp":"2026-02-15T19:42:19.701Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:43:18.540Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:44:18.555Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:45:18.560Z"}
+{"bookingId":"6992225abeefc4d8ee63c08b","expiresAt":"2026-02-15T19:55:30.285Z","level":"info","message":"Booking created","timestamp":"2026-02-15T19:45:31.203Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:46:18.648Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:47:18.579Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:48:18.834Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:49:18.705Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:50:18.604Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:51:18.648Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:52:18.612Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:53:19.899Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:54:18.921Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:55:18.647Z"}
+{"count":1,"duration":2433,"level":"info","message":"clean expired bookings","timestamp":"2026-02-15T19:56:20.979Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:57:18.730Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:58:18.740Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T19:59:18.888Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:00:18.821Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:01:18.766Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:02:19.000Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:03:18.791Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:04:18.868Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:05:19.141Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:06:18.914Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:07:18.935Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:08:18.982Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:09:18.750Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:10:18.784Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:11:18.819Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:12:18.956Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:13:19.010Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:14:18.839Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:15:18.893Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:16:18.938Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:17:40.753Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:18:18.967Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:19:19.194Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:20:18.832Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:21:19.165Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:22:19.034Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:23:18.841Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:24:19.363Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:25:19.225Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:26:19.177Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:27:18.877Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:28:18.879Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:29:18.987Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:30:18.898Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:31:19.172Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-15T20:32:19.014Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-15T20:55:16.980Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-16T10:15:03.648Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:16:05.853Z"}
+{"bookingId":"6992ee9501a3eca750ea88bb","expiresAt":"2026-02-16T10:26:53.287Z","level":"info","message":"Booking created","timestamp":"2026-02-16T10:16:54.894Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:17:04.294Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-16T10:17:06.765Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6992ee9501a3eca750ea88bb","level":"info","message":"Booking Confirmed","timestamp":"2026-02-16T10:17:06.766Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:18:03.782Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:19:03.808Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:20:03.814Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:21:03.793Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:22:03.798Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:23:04.049Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:24:03.820Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:25:03.871Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:26:03.824Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:27:03.958Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:28:03.845Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:29:03.856Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:30:03.852Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:31:03.850Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:32:03.862Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:33:03.860Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:34:03.866Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:35:03.875Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:36:03.886Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:37:03.890Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:38:03.894Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:39:03.906Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:40:04.017Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:41:04.417Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:42:04.232Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:43:04.098Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:44:10.190Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:45:04.425Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:46:08.219Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:47:05.644Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:48:03.994Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:49:03.990Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:50:04.016Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:51:04.132Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:52:04.020Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:53:04.092Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:54:04.029Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:55:04.123Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:56:04.037Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:57:04.111Z"}
+{"bookingId":"6992f80901a3eca750ea88bc","expiresAt":"2026-02-16T11:07:13.044Z","level":"info","message":"Booking created","timestamp":"2026-02-16T10:57:13.987Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:58:04.169Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T10:59:04.064Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:00:04.079Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:01:04.210Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:02:04.380Z"}
+{"error":"Error: you have an active booking session for this category.complete payment or wait for release\n    at createBooking (D:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:41:15)\n    at async createBookingCtrl (D:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\bookingController.js:11:25)","level":"error","message":"create booking error","timestamp":"2026-02-16T11:02:06.565Z"}
+{"error":"Error: you have an active booking session for this category.complete payment or wait for release\n    at createBooking (D:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:41:15)\n    at async createBookingCtrl (D:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\bookingController.js:11:25)","level":"error","message":"create booking error","timestamp":"2026-02-16T11:02:23.713Z"}
+{"bookingId":"6992f95501a3eca750ea88bd","expiresAt":"2026-02-16T11:12:45.557Z","level":"info","message":"Booking created","timestamp":"2026-02-16T11:02:46.510Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:03:04.097Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:04:04.233Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:05:04.111Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:06:04.100Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:07:04.113Z"}
+{"count":1,"duration":1980,"level":"info","message":"clean expired bookings","timestamp":"2026-02-16T11:08:05.998Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:09:04.126Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:10:04.125Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:11:04.238Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:12:04.195Z"}
+{"count":1,"duration":2070,"level":"info","message":"clean expired bookings","timestamp":"2026-02-16T11:13:06.123Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:14:04.182Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:15:04.198Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:16:04.407Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:17:04.301Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:18:04.268Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:19:04.273Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:20:04.214Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:21:03.042Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:21:04.105Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:21:04.383Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:21:36.005Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:21:37.066Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:22:04.862Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:23:04.223Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:18.172Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:19.284Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:22.269Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:23.322Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:25.360Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:26.502Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:46.995Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:48.059Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:49.941Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:51.063Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:52.610Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:53.845Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:55.995Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:23:57.242Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:01.759Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:02.829Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:24:04.273Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:08.754Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:09.990Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:17.671Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:18.749Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:23.334Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:24.394Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:26.368Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:27.420Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:29.660Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:30.859Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:41.020Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:42.164Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:42.934Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:43.992Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:45.844Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:46.896Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:48.203Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:49.238Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:51.976Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:53.125Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:55.874Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:56.992Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:58.362Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:24:59.468Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:25:04.429Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:25:12.520Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:25:13.643Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:25:23.650Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:25:24.723Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:25:40.078Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:25:41.149Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:25:53.354Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:25:54.431Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:26:04.533Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:27:04.352Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:28:04.356Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:29:04.271Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:30:04.303Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:31:04.289Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:32:04.297Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:33:04.288Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:34:04.380Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:35:04.358Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:36:04.314Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:37:04.297Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:38:04.311Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:38:17.850Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:38:18.890Z","userId":"69864b9f6cfe706fa476a582"}
+{"bookingId":"699301b301a3eca750ea88be","expiresAt":"2026-02-16T11:48:27.899Z","level":"info","message":"Booking created","timestamp":"2026-02-16T11:38:29.353Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-16T11:38:44.164Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"699301b301a3eca750ea88be","level":"info","message":"Booking Confirmed","timestamp":"2026-02-16T11:38:44.165Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:39:04.320Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:39:08.088Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:39:09.250Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:39:29.895Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:39:31.081Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:39:37.814Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:39:39.309Z","userId":"69864b9f6cfe706fa476a582"}
+{"bookingId":"6993020101a3eca750ea88bf","expiresAt":"2026-02-16T11:49:45.365Z","level":"info","message":"Booking created","timestamp":"2026-02-16T11:39:46.547Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-16T11:39:53.513Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6993020101a3eca750ea88bf","level":"info","message":"Booking Confirmed","timestamp":"2026-02-16T11:39:53.514Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:40:04.354Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:40:11.911Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:40:13.052Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:40:19.746Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:40:20.881Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:40:21.340Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:40:22.448Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:41:04.563Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:42:04.364Z"}
+{"bookingId":"699302a201a3eca750ea88c0","expiresAt":"2026-02-16T11:52:26.444Z","level":"info","message":"Booking created","timestamp":"2026-02-16T11:42:27.953Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-16T11:42:36.905Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"699302a201a3eca750ea88c0","level":"info","message":"Booking Confirmed","timestamp":"2026-02-16T11:42:36.906Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:42:56.011Z","userId":"69864b9f6cfe706fa476a582"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:42:57.068Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:43:04.385Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:44:04.536Z"}
+{"bookingId":"6993032f01a3eca750ea88c1","expiresAt":"2026-02-16T11:54:47.306Z","level":"info","message":"Booking created","timestamp":"2026-02-16T11:44:48.636Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-16T11:44:54.810Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"6993032f01a3eca750ea88c1","level":"info","message":"Booking Confirmed","timestamp":"2026-02-16T11:44:54.810Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:45:03.360Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:45:04.502Z"}
+{"err":"\nInvalid `prisma.booking.findMany()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\services\\bookingService.js:250:31\n\n  247 \n  248 \n  249 const getUserBookings = async (userId) => {\n→ 250   return await prisma.booking.findMany({\n          where: {\n            userId: \"69864b9f6cfe706fa476a582\",\n            status: \"confirmed\"\n                    ~~~~~~~~~~~\n          },\n          include: {\n            concert: {\n              select: {\n                id: true,\n                name: true,\n                venue: true,\n                date: true,\n                imageUrl: true\n              }\n            },\n            category: {\n              select: {\n                id: true,\n                name: true,\n                price: true\n              }\n            }\n          },\n          orderBy: {\n            bookedAt: \"desc\"\n          }\n        })\n\nInvalid value for argument `status`. Expected BookingStatus.","level":"error","message":"Get bookings error","timestamp":"2026-02-16T11:45:04.505Z","userId":"69864b9f6cfe706fa476a582"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:46:04.671Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-16T11:46:53.228Z"}
+{"bookingId":"699303de1ba598fccc00a3a6","expiresAt":"2026-02-16T11:57:42.420Z","level":"info","message":"Booking created","timestamp":"2026-02-16T11:47:43.515Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:47:53.353Z"}
+{"level":"info","message":"email sent","subject":"booking Confirmation","timestamp":"2026-02-16T11:48:02.455Z","to":"eijazkhan9099@gmail.com"}
+{"bookingId":"699303de1ba598fccc00a3a6","level":"info","message":"Booking Confirmed","timestamp":"2026-02-16T11:48:02.457Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:48:53.471Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:49:53.462Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:50:53.373Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:51:53.387Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T11:52:53.386Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-16T12:13:03.519Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:14:10.846Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:15:03.723Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:16:03.696Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:17:03.752Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:18:03.647Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:19:03.880Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:20:03.676Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:21:03.670Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:22:03.677Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:23:03.800Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:24:03.687Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:25:03.810Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:26:03.764Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:27:03.721Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:28:03.729Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:29:03.838Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:30:03.855Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:31:03.861Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:32:03.764Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:33:03.826Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:34:04.135Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:35:03.755Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:36:04.123Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:37:03.763Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:38:03.803Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:39:03.989Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:40:03.768Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:41:03.905Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:42:03.803Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T12:59:58.246Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:00:46.017Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:01:45.990Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:02:46.172Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:03:46.102Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:04:46.174Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:05:46.048Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:06:46.071Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:07:46.121Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:08:46.156Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:09:46.117Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:10:46.220Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:11:46.534Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:12:46.264Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:13:46.086Z"}
+{"code":"P2010","err":{"clientVersion":"6.19.2","code":"P2010","meta":{"code":"unknown","message":"Kind: I/O error: An existing connection was forcibly closed by the remote host. (os error 10054), labels: {}, source: None","modelName":"Concert"},"name":"PrismaClientKnownRequestError"},"level":"error","message":"Get concert Error \nInvalid `prisma.concert.findUnique()` invocation in\nD:\\eventManagementApp\\concertapp\\backend\\src\\controllers\\constantController.js:9:46\n\n  6 \n  7 const getConcertCtrl = async (req,res) => {\n  8     try{\n→ 9         const concert = await prisma.concert.findUnique(\nRaw query failed. Code: `unknown`. Message: `Kind: I/O error: An existing connection was forcibly closed by the remote host. (os error 10054), labels: {}, source: None`","timestamp":"2026-02-16T13:14:32.229Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:14:46.092Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-16T13:15:12.441Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:16:21.688Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:17:12.643Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:18:12.604Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:19:12.580Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:20:12.693Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:21:12.604Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:22:12.661Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:23:12.603Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:24:12.612Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:25:12.665Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:26:12.670Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:45:07.064Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:46:02.830Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:47:02.652Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:48:02.989Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:49:02.822Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:50:02.698Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:51:03.092Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:52:02.706Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:53:02.738Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:54:06.398Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:55:03.747Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:56:03.445Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:57:03.639Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:58:03.451Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T13:59:02.773Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:00:02.999Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:01:02.810Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:02:02.999Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:03:02.833Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:04:03.316Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:05:02.836Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:06:02.955Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:07:02.838Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:08:02.886Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:09:02.854Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:10:02.872Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:11:02.935Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:12:03.061Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:13:03.194Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:22:27.505Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:23:25.201Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:24:25.209Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:25:25.227Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:26:25.276Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:27:25.237Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:28:25.235Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:29:25.234Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:30:25.248Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:31:25.476Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:32:25.261Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:33:25.340Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:34:25.277Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:35:25.278Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:36:25.293Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:37:25.324Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:38:25.309Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:39:25.395Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:40:25.330Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:41:25.336Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-16T14:42:00.258Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:43:06.652Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:44:00.387Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:45:00.422Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:46:00.394Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:47:00.398Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:48:00.409Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:49:00.446Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:50:00.432Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:51:00.448Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:52:00.454Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:53:00.461Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:54:00.470Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:55:00.483Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:56:00.504Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:57:00.510Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:58:00.522Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T14:59:00.542Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:00:00.525Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:01:00.551Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:02:00.551Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:03:01.041Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:04:00.570Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:05:01.753Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:06:01.524Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:07:00.709Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:08:04.777Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:09:01.850Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T15:10:00.600Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-16T16:57:33.844Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T16:58:41.821Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T16:59:33.970Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:00:33.974Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:01:34.085Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:02:33.987Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:03:34.006Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:04:33.992Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:05:34.035Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:06:34.218Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:07:34.477Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:08:34.085Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:09:34.052Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:10:34.071Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:11:35.680Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:12:34.254Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:13:34.091Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:14:34.268Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:15:34.224Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:16:34.121Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:17:34.123Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:18:34.284Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:19:34.130Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:20:34.817Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-16T17:21:35.871Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:22:45.392Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-02-16T17:23:34.379Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:24:34.858Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:25:34.484Z"}
+{"level":"info","message":"No expired bookings to clean","timestamp":"2026-02-16T17:26:34.592Z"}

@@ -9,7 +9,7 @@ interface Ticket {
 
 interface BookingState {
     tickets: Ticket[],
-    addTicket: (sectionId: string, name: string, quantity?: number) => void;
+    addTicket: (sectionId: string, name: string, price: number, quantity?: number) => void;
     removeTicket: (sectionId: string) => void;
     updateQuantity: (sectionId: string, quantity: number) => void;
     getTotal: () => number;
